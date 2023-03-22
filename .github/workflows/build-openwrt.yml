@@ -106,7 +106,7 @@ jobs:
     - name: luci-app-romupdate
       run: |
         cd openwrt/package
-        git https://github.com/Blueplanet20120/luci-app-romupdate.git
+        git clone https://github.com/Blueplanet20120/luci-app-romupdate.git
         
     - name: lenyu
       run: |
