@@ -61,7 +61,7 @@ jobs:
         swap-storage: true
         
     - name: Checkout
-      uses: actions/checkout@v3.1.0  
+      uses: actions/checkout@v4
       
     - name: Disk space
       run: |
@@ -237,7 +237,7 @@ jobs:
         echo "status=success" >> $GITHUB_OUTPUT
 
     - name: Upload firmware to release
-      uses: softprops/action-gh-release@v1
+      uses: Blueplanet20120/action-gh-release@v1
       if: steps.tag.outputs.status == 'success' && !cancelled()
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
